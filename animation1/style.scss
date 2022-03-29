@@ -1,5 +1,6 @@
 :root {
     --boxColor: #0ff7;
+    --rotateSpeed: 30s;
   }
   
   body {
@@ -16,6 +17,10 @@
   .scene {
     position: relative;
     transform-style: preserve-3d;
+    animation: sceneRotate var( --rotateSpeed) infinite linear;
+    @keyframes sceneRotate {
+        to{ transform: rotateY(360deg); }
+    }
   }
   
   .ball {
@@ -30,6 +35,8 @@
         circle at top,
         lightblue,#000//on peut changer la repartition des deux couleur avec un pourcentage entre les deux
     );
+
+    animation: sceneRotate var( --rotateSpeed) infinite linear reverse;
   }
   .top .ballshadow {
       position: absolute;
