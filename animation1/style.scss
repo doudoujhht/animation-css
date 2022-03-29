@@ -1,4 +1,5 @@
 :root{
+    //root ca signifie la racine du projet.
     --boxColor: #0ff7
 }
 
@@ -8,4 +9,15 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.scene{
+    position: relative;
+}
+
+.ball{
+    width:1em;//comme il n'y a pas de texte chaque fois qu'on va changer le font size la boule aussi va changer
+    height:1em;
+    border: radius 50%;
+    
 }
