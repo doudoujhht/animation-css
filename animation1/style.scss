@@ -1,6 +1,7 @@
 :root {
     --boxColor: #0ff7;
     --rotateSpeed: 30s;
+    --bounceSpeed: 1.5s;
   }
   
   body {
@@ -36,7 +37,14 @@
         lightblue,#000//on peut changer la repartition des deux couleur avec un pourcentage entre les deux
     );
 
-    animation: sceneRotate var( --rotateSpeed) infinite linear reverse;
+    animation: 
+      ballBounce var(--bounceSpeed) infinite ease-out,
+      sceneRotate var( --rotateSpeed) infinite linear reverse;
+
+    @keyframes ballBounce {
+      0%,100%{bottom: 1em;}
+      50%{bottom: 3em; animation-timing-function: ease-in;}
+    }
   }
   .top .ballshadow {
       position: absolute;
