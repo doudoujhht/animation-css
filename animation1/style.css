@@ -73,7 +73,7 @@ body {
           animation: ballShadow var(--bounceSpeed) infinite ease-out;
 }
 @-webkit-keyframes ballShadow {
-  0%, 100% {
+  0%, 8%, 93.5%, 100% {
     transform: scale(1);
     opacity: 1;
   }
@@ -85,7 +85,7 @@ body {
   }
 }
 @keyframes ballShadow {
-  0%, 100% {
+  0%, 8%, 93.5%, 100% {
     transform: scale(1);
     opacity: 1;
   }
@@ -111,7 +111,7 @@ body {
   0%, 100% {
     height: 1.5em;
   }
-  50% {
+  8%, 93.5% {
     height: 2em;
   }
 }
@@ -119,7 +119,7 @@ body {
   0%, 100% {
     height: 1.5em;
   }
-  50% {
+  8%, 93.5% {
     height: 2em;
   }
 }

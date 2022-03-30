@@ -56,7 +56,7 @@
       ballShadow var(--bounceSpeed) infinite ease-out;
 
       @keyframes ballShadow {
-        0%,100%{transform: scale(1); opacity: 1;}
+        0%,8%,93.5%,100%{transform: scale(1); opacity: 1;}
         50%{transform: scale(2); opacity: 0.5; animation-timing-function: ease-in;}
       }
       
@@ -72,8 +72,8 @@
     cubeHeight var(--bounceSpeed) infinite ease-out;
 
     @keyframes cubeHeight {
-      0%,100%{height: 1.5em;}
-      50%{height: 2em;}
+      0%, 100%{height: 1.5em;}
+      8%, 93.5%{height: 2em;}
     }
   }
   .cube .left, .cube .right, .cube .front, .cube .back {
