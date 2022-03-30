@@ -1,0 +1,12 @@
+.container{
+    display: flex;
+    margin: 5%;
+    .image1 , .image2, .image3,.image4{
+        width: 90%;
+        border-radius: 5%;
+    }
+    
+}
+body{
+    background-color: rgb(17, 148, 192);
+}
