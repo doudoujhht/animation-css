@@ -5,6 +5,34 @@
         width: 90%;
         border-radius: 5%;
     }
+    .premier, .deuxieme, .troisieme, .quatrieme{
+        transition: 2000ms;
+    }
+
+    .premier:hover{
+        transform: scale(1.15);
+        transition: 2000ms;
+    }
+    .premier:hover ~ *  {
+        filter: blur(3px);
+        transition: 2000ms ease-in;
+    }
+
+    .deuxieme:hover{
+        transform: scale(1.15);
+        transition: 2000ms;
+    }
+    .deuxieme:hover .premier, .deuxieme:hover ~ *{
+        filter: blur(3px);
+        transition: 2000ms ease-in;
+    }
+
+    .quatrieme-blur,.deuxieme-blur,.troisieme-blur{
+        position: absolu;
+        background-color: red;
+    }
+
+
     
 }
 body{

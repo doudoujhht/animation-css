@@ -6,6 +6,29 @@
   width: 90%;
   border-radius: 5%;
 }
+.container .premier, .container .deuxieme, .container .troisieme, .container .quatrieme {
+  transition: 2000ms;
+}
+.container .premier:hover {
+  transform: scale(1.15);
+  transition: 2000ms;
+}
+.container .premier:hover ~ * {
+  filter: blur(3px);
+  transition: 2000ms ease-in;
+}
+.container .deuxieme:hover {
+  transform: scale(1.15);
+  transition: 2000ms;
+}
+.container .deuxieme:hover .premier, .container .deuxieme:hover ~ * {
+  filter: blur(3px);
+  transition: 2000ms ease-in;
+}
+.container .quatrieme-blur, .container .deuxieme-blur, .container .troisieme-blur {
+  position: absolu;
+  background-color: red;
+}
 
 body {
   background-color: #1194c0;
