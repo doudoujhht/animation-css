@@ -2,6 +2,10 @@
   --boxColor: #0ff7;
   --rotateSpeed: 30s;
   --bounceSpeed: 1.5s;
+  --rotatedirection:360deg;
+  --ballColor:lightblue;
+  --color1:#111;
+  --color2:#222;
 }
 
 body {
@@ -23,12 +27,12 @@ body {
 }
 @-webkit-keyframes sceneRotate {
   to {
-    transform: rotateY(360deg);
+    transform: rotateY(var(--rotatedirection));
   }
 }
 @keyframes sceneRotate {
   to {
-    transform: rotateY(360deg);
+    transform: rotateY(var(--rotatedirection));
   }
 }
 
@@ -36,12 +40,13 @@ body {
   width: 1em;
   height: 1em;
   border-radius: 50%;
-  background-color: lightblue;
+  background-color: var(--ballColor);
   position: absolute;
   left: -0.5em;
   bottom: 1em;
-  background-image: radial-gradient(circle at top, lightblue, #000);
+  background-image: radial-gradient(circle at top, var(--ballColor), #000);
   animation: ballBounce var(--bounceSpeed) infinite ease-out, sceneRotate var(--rotateSpeed) infinite linear reverse;
+  transition: 2s;
 }
 @-webkit-keyframes ballBounce {
   0%, 100% {
@@ -68,7 +73,7 @@ body {
   position: absolute;
   width: 100%;
   height: 100%;
-  background-image: radial-gradient(#0007, #0000 50%);
+  background-image: radial-gradient(rgba(0, 0, 0, 0.4666666667), rgba(0, 0, 0, 0) 50%);
   -webkit-animation: ballShadow var(--bounceSpeed) infinite ease-out;
           animation: ballShadow var(--bounceSpeed) infinite ease-out;
 }
@@ -129,7 +134,7 @@ body {
   width: 100%;
   height: 100%;
   background: var(--boxColor);
-  box-shadow: 0 0 0.5em #000a inset;
+  box-shadow: 0 0 0.5em rgba(0, 0, 0, 0.6666666667) inset;
 }
 
 .cube .front {
@@ -154,14 +159,14 @@ body {
   height: 2em;
   background: var(--boxColor);
   transform: translateY(-50%) rotateX(90deg);
-  box-shadow: 0 0 0.5em #000a inset;
+  box-shadow: 0 0 0.5em rgba(0, 0, 0, 0.6666666667) inset;
 }
 
 .cube .bottom {
   position: absolute;
   width: 2em;
   height: 2em;
-  background: #0007;
+  background: rgba(0, 0, 0, 0.4666666667);
   bottom: 0;
   transform: translateY(50%) rotateX(90deg);
   box-shadow: 0 0 0.5em #000;
@@ -173,8 +178,16 @@ body {
   transform: translate(-50%, -50%) rotateX(90deg);
   width: 15em;
   height: 15em;
-  background-image: radial-gradient(#0000, #000 75%), repeating-conic-gradient(from 45deg, #111 0deg 90deg, #222 90deg 180deg);
+  background-image: radial-gradient(rgba(0, 0, 0, 0), #000 75%), repeating-conic-gradient(from 45deg, var(--color1) 0deg 90deg, var(--color2) 90deg 180deg);
   background-size: 100%, 1em 1em;
+}
+
+.menu {
+  position: absolute;
+  top: 0;
+  right: 0;
+  font-size: 0.3em;
+  color: white;
 }
 
 /*# sourceMappingURL=style.css.map *//*# sourceMappingURL=style.css.map */
