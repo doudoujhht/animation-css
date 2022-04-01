@@ -25,3 +25,23 @@ colorpicker3.addEventListener("input", (e) =>{
 colorpicker4.addEventListener("input", (e) =>{
     root.style.setProperty("--color2", e.target.value);
 })
+
+colorpicker5.addEventListener("input", (e) =>{
+    root.style.setProperty("--backgroundColor", e.target.value);
+})
+
+checke.addEventListener("input", (e) =>{
+    let elementache = document.getElementById("checke").checked;
+    if(elementache){
+        root.style.setProperty("--rotatedirection", 360+"deg");
+    }
+    else{
+        root.style.setProperty("--rotatedirection", -360+"deg");
+    }
+    elementache=!elementache;
+
+})
+
+// ///////////////  pas mon code /////////////////////////
+
+// ///////////////  pas mon code /////////////////////////
